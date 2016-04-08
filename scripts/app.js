@@ -14,7 +14,7 @@
 		$scope.productList = [];
 		$http.get('model/productsList.json').
 		  success(function(data, status, headers, config) {
-			  $scope.productsList = data;
+			  $scope.productList = data;
 		  }).
 		  error(function(data, status, headers, config) {
 			  $scope.error = status;
