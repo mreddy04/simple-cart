@@ -1,0 +1,44 @@
+[{
+	"productId": "productId1",
+	"productImage": "http://placehold.it/320x150",
+	"productName": "ProductName1",
+	"brandName": "brandName1",
+	"price": 200,
+	"packingDetails": "packingDetails1"
+  },{
+	"productId": "productId2",
+	"productImage": "http://placehold.it/320x150",
+	"productName": "ProductName2",
+	"brandName": "brandName2",
+	"price": 500,
+	"packingDetails": "packingDetails2"
+  },{
+	"productId": "productId3",
+	"productImage": "http://placehold.it/320x150",
+	"productName": "ProductName3",
+	"brandName": "brandName3",
+	"price": 300,
+	"packingDetails": "packingDetails3"
+  },{
+	"productId": "productId4",
+	"productImage": "http://placehold.it/320x150",
+	"productName": "ProductName4",
+	"brandName": "brandName4",
+	"price": 150,
+	"packingDetails": "packingDetails4"
+  },{
+	"productId": "productId5",
+	"productImage": "http://placehold.it/320x150",
+	"productName": "ProductName5",
+	"brandName": "brandName5",
+	"price": 600,
+	"packingDetails": "packingDetails5"
+  },{
+	"productId": "productId6",
+	"productImage": "http://placehold.it/320x150",
+	"productName": "ProductName6",
+	"brandName": "brandName6",
+	"price": 250,
+	"packingDetails": "packingDetails6"
+ }]
+		 
