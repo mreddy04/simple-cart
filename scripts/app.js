@@ -23,7 +23,7 @@ angular.module('myCartApp', [])
 
 
 
-        //localstorage.setObject('cartItems', '');
+        localstorage.setObject('cartItems', '');
         //console.log( typeof(localstorage.getObject('cartItems').length)  == "undefined");
         if (localstorage.getObject('cartItems').length <= 0 || typeof(localstorage.getObject('cartItems').length) == "undefined") {
             $scope.cartItems = [];
