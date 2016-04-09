@@ -1,69 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Shopping cart</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+   <head>
+      <title>Shopping cart</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel='stylesheet' href='styles/main.css' type='text/css'/>
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="scripts/app.js"></script>
-
-</head>
-<body ng-app="myCartApp">
-
-	<div class="container-fluid" ng-controller="myCartController">
-		<h1>Masala and Spice ({{totalProductItems}} items)</h1>
-		<div class="col-md-12 displayItems">
-			<div class="col-md-8" >
-			
-					<div class="col-md-4" ng-repeat="product in productList">
-						<div class="thumbnail">
-							<img ng-src="{{product.productImage}}" alt="">
-							<div class="caption">
-								<h4 class="pull-right">{{product.price | currency}}</h4>
-								<p>{{product.brandName}}</p>
-								<h4>{{product.productName}}</h4>
-								<p>{{product.packingDetails}}</p>
-								<span><a ng-click="removeItem(product)" ng-if="itemExsistsInCart(product)">-</a></span>&nbsp;&nbsp;
-								<a ng-click="addItemToCart(product)">add to cart</a>&nbsp;&nbsp;
-								<span><a ng-click="addItem(product)" ng-if="itemExsistsInCart(product)">+</a></span>
-							</div>
-						</div>
-					</div>
-					
-			</div>
-			<div class="col-md-4">
-				<div class="thumbnail">
-					<h1>Items in cart</h1>
-					<div class="row">
-						<div class="col-sm-6">
-							<p>Items in cart <strong> {{totalCartItems}}</strong></p>
-						</div>
-						<div class="col-sm-6">
-							<p>Total <strong>{{totalCartValue()}}</strong></p>
-						</div>
-					</div>
-					<hr>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="col-sm-6"><strong>item</strong></div>
-							<div class="col-sm-2"><strong>quantity</strong></div>
-							<div class="col-sm-2"><strong>total</strong></div>
-							<div class="col-sm-2"></div>
-						</div>
-						<div class="col-md-12" ng-repeat="cartItem in cartDetails"> 
-							<div class="col-sm-6">{{cartItem.productName}}</div>
-							<div class="col-sm-2">{{cartItem.quantity}}</div>
-							<div class="col-sm-2">{{cartItem.quantity * cartItem.price}}</div>
-							<div class="col-sm-2"><a ng-click="removeItemFromCart(cartItem)">remove</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="scripts/app.js"></script>
+   </head>
+   <body ng-app="myCartApp">
+      <div class="container-fluid" ng-controller="myCartController">
+         <h1>Masala and Spice ({{totalProductItems}} items)</h1>
+         <div class="col-md-12 displayItems">
+            <div class="col-md-8" >
+               <div class="col-md-4" ng-repeat="product in productList">
+                  <div class="thumbnail">
+                     <img ng-src="{{product.productImage}}" alt="">
+                     <div class="caption">
+                        <h4 class="pull-right">{{product.price | currency}}</h4>
+                        <p>{{product.brandName}}</p>
+                        <h4>{{product.productName}}</h4>
+                        <p>{{product.packingDetails}}</p>
+                        <span><a ng-click="removeItem(product)" ng-if="itemExsistsInCart(product)">-</a></span>&nbsp;&nbsp;
+                        <a ng-click="addItemToCart(product)">add to cart</a>&nbsp;&nbsp;
+                        <span><a ng-click="addItem(product)" ng-if="itemExsistsInCart(product)">+</a></span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="thumbnail">
+                  <h1>Items in cart</h1>
+                  <div class="row">
+                     <div class="col-sm-6">
+                        <p>Items in cart <strong> {{totalCartItems}}</strong></p>
+                     </div>
+                     <div class="col-sm-6">
+                        <p>Total <strong>{{totalCartValue()}}</strong></p>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="col-sm-6"><strong>item</strong></div>
+                        <div class="col-sm-2"><strong>quantity</strong></div>
+                        <div class="col-sm-2"><strong>total</strong></div>
+                        <div class="col-sm-2"></div>
+                     </div>
+                     <div class="col-md-12" ng-repeat="cartItem in cartDetails">
+                        <div class="col-sm-6">{{cartItem.productName}}</div>
+                        <div class="col-sm-2">{{cartItem.quantity}}</div>
+                        <div class="col-sm-2">{{cartItem.quantity * cartItem.price}}</div>
+                        <div class="col-sm-2"><a ng-click="removeItemFromCart(cartItem)">remove</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
 </html>
