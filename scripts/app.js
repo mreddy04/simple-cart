@@ -1,4 +1,3 @@
-'use strict';
 angular.module('myCartApp', [])
     .factory('localstorage', ['$window', function($window) {
         return {
